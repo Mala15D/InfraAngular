@@ -14,7 +14,7 @@ export class BookingService {
 
   }
   getBookingbyId(id:number){
-    return this.http.get<Booking[]>(environment.url+'/booking/'+id); 
+    return this.http.get<Booking[]>(environment.url+'/booking/'+i); 
 
   }
 }
