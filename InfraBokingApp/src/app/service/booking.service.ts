@@ -10,11 +10,11 @@ export class BookingService {
   private booking:Booking[]=[]
   constructor(private http:HttpClient) { }
   getAllBookings(){
-    return this.http.get<Booking[]>('http://localhost:9051/booking'); 
+    return this.http.get<Booking[]>(environment.url+'/booking'); 
 
   }
   getBookingbyId(id:number){
-    return this.http.get<Booking[]>('http://localhost:9051/booking/'+id); 
+    return this.http.get<Booking[]>(environment.url+'/booking/'+id); 
 
   }
 }
